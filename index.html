@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ali Zafar Mohammad — Computer Science student at McMaster University. Fullstack developer, ML enthusiast, and software engineer." />
+    <title>Ali Zafar Mohammad | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+      <div class="logo">AZM<span class="logo-dot">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="hamburger-nav">
+      <div class="logo">AZM<span class="logo-dot">.</span></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" onclick="toggleMenu(); openResume(event)">Resume</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="profile">
+      <div class="hero-content reveal">
+        <p class="greeting">Hello, I'm</p>
+        <h1 class="hero-name">Ali Zafar<br />Mohammad</h1>
+        <p class="hero-subtitle">
+          <span class="typed-text"></span><span class="cursor-blink">|</span>
+        </p>
+        <p class="hero-description">
+          CS student at McMaster University building fullstack applications,
+          ML models, and scalable cloud solutions.
+        </p>
+        <div class="btn-container">
+          <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" onclick="openResume(event)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            Let's Talk
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/ali-zafar-mohammad-754103244/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/mohdalizafar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:mohaa143@mcmaster.ca" aria-label="Email">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">
+            <img src="./assets/scenaryprofile.jpeg" alt="Ali Zafar Mohammad" />
+          </div>
+        </div>
+        <div class="floating-badge badge-1 reveal-delay-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span>Fullstack</span>
+        </div>
+        <div class="floating-badge badge-2 reveal-delay-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/></svg>
+          <span>ML / AI</span>
+        </div>
+        <div class="floating-badge badge-3 reveal-delay-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          <span>Cloud</span>
+        </div>
+        <div class="floating-badge badge-4 reveal-delay-4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          <span>IT</span>
+        </div>
+        <div class="floating-badge badge-5 reveal-delay-5">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          <span>Quant</span>
+        </div>
+        <div class="floating-badge badge-6 reveal-delay-6">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Finance</span>
+        </div>
+        <div class="floating-badge badge-7 reveal-delay-7">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+          <span>Data Analysis</span>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-header reveal">
+        <p class="section-label">Get To Know More</p>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a Computer Science student at McMaster University with hands-on
+            experience in fullstack development, data analytics, machine learning,
+            and cloud infrastructure. I've built web applications, backend systems,
+            ML pipelines, and data-driven tools using Python, Java, C, C#, C++, SQL,
+            JavaScript, React, Django, AWS, and other modern technologies.
+          </p>
+          <p>
+            Through internships at Niwish and KUWAITNET, I've worked on real products
+            in team environments, building APIs, improving workflows, and delivering
+            practical solutions designed for users and scale. These experiences
+            strengthened both my technical foundation and the way I approach solving
+            real-world problems.
+          </p>
+          <p>
+            I've also completed projects in finance and quantitative analysis,
+            including DCF valuation models, volatility regime detection using GARCH
+            and Markov Switching models, and trading systems with backtesting
+            pipelines. I enjoy applying technology and data to financial problems
+            just as much as I do to software products.
+          </p>
+          <p>
+            What excites me most is working where software, data, finance, and
+            business come together. I enjoy building systems that turn complex
+            information into useful insights, smarter decisions, and real impact.
+          </p>
+        </div>
+        <div class="about-cards reveal">
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            </div>
+            <h3>Experience</h3>
+            <div class="experience-list">
+              <div class="exp-item">
+                <strong>Software Developer Intern</strong>
+                <span class="exp-company">Niwish</span>
+                <time>May – Sep 2025</time>
+              </div>
+              <div class="exp-item">
+                <strong>Software Development Lead</strong>
+                <span class="exp-company">McMaster RoboSub</span>
+                <time>Feb 2025 – Present</time>
+              </div>
+              <div class="exp-item">
+                <strong>Software Developer Intern</strong>
+                <span class="exp-company">KUWAITNET</span>
+                <time>Jun – Sep 2024</time>
+              </div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
+            </div>
+            <h3>Education</h3>
+            <div class="edu-info">
+              <strong>B.A.Sc. Computer Science</strong>
+              <span>(Honours, Co-op)</span>
+              <span class="exp-company">McMaster University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="experience">
+      <div class="section-header reveal">
+        <p class="section-label">What I Work With</p>
+        <h2 class="section-title">Skills & Tools</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Haskell</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            <h3>Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">AdonisJS</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Bootstrap 5</span>
+            <span class="skill-tag">PyTorch</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Microsoft Azure</span>
+            <span class="skill-tag">Google cloud</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Supabase</span>
+            
+            <span class="skill-tag">MS Excel</span>
+            <span class="skill-tag">MS Powerpoint</span>
+            <span class="skill-tag">MS Word</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <p class="section-label">What I've Built</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="ml">ML / AI</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Volatility Regime Detection -->
+        <div class="project-card reveal" data-category="ml finance">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <span class="project-date">Jan 2026</span>
+          </div>
+          <h3 class="project-title">Volatility Regime Detection & Risk Management</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/dark%20finance%20volatility%20dashboard%20candlestick%20charts%20GARCH%20risk%20regime%20traffic%20light%20indigo%20minimal?width=512&amp;height=288&amp;nologo=true&amp;seed=42" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Quantitative volatility regime engine using Markov Switching models and GARCH
+            to classify markets into risk-on, caution, and risk-off regimes. Built an
+            interactive Streamlit dashboard for real-time risk guidance.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>GARCH</span>
+            <span>HMM</span>
+            <span>Streamlit</span>
+          </div>
+        </div>
+
+        <!-- MacSocial -->
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://macclub-c9d99.web.app/" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">MacSocial – Event Platform</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/social%20event%20platform%20UI%20mockup%20RSVP%20cards%20avatars%20purple%20glassmorphism%20dark?width=512&amp;height=288&amp;nologo=true&amp;seed=42" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Full-stack React and Firebase platform for event discovery, RSVPs, and real-time
+            user interaction. Features ranking and personalization logic with CI/CD via
+            GitHub Actions for automated Firebase deployment.
+          </p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Firebase</span>
+            <span>GitHub Actions</span>
+            <span>CI/CD</span>
+          </div>
+        </div>
+
+        <!-- Food Recipe App -->
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16c1-1.3 1.6-2.7 1.88-4.13C18.5 8.55 16.78 6 14 6a4 4 0 0 0-4 4c0 .78.22 1.5.6 2.12"/><path d="M9 18c-1.22-.44-2.27-1.35-2.88-2.65C5.5 13.55 6.22 11 9 11a4 4 0 0 1 4 4c0 .78-.22 1.5-.6 2.12"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span class="project-date">Sep – Dec 2025</span>
+          </div>
+          <h3 class="project-title">Food Recipe App</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/overhead%20cooking%20flat%20lay%20colorful%20ingredients%20recipe%20app%20phone%20cutting%20board%20warm%20kitchen?width=512&amp;height=288&amp;nologo=true&amp;seed=42" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Mobile-first recipe platform with dynamic search, tag-based filtering,
+            and an interactive cooking mode featuring step navigation, integrated timers,
+            and voice-guided instructions via Web Speech API.
+          </p>
+          <div class="project-tech">
+            <span>JavaScript</span>
+            <span>HTML/CSS</span>
+            <span>Web Speech API</span>
+            <span>localStorage</span>
+          </div>
+        </div>
+
+        <!-- Obesity Risk Classification -->
+        <div class="project-card reveal" data-category="ml">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maqbom3/4al3-final-project" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Obesity Risk Classification</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/neural%20network%20data%20classification%20colorful%20clusters%20decision%20boundary%20health%20ML%20dark%20background?width=512&amp;height=288&amp;nologo=true&amp;seed=42" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            End-to-end ML pipeline classifying 7 obesity risk levels from 2,100+ records.
+            Benchmarked 12+ models including Random Forest and Neural Networks, achieving
+            0.85+ macro F1-score with stratified cross-validation.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>NumPy</span>
+            <span>Pandas</span>
+          </div>
+        </div>
+
+        <!-- NutriScan AI -->
+        <div class="project-card reveal" data-category="ml">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/smil7/NutriScanAI" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">NutriScan AI</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/AI%20scanning%20nutrition%20label%20on%20food%20package%20futuristic%20minimal?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            AI-powered nutritional label scanner using Google Vision API for image-to-text
+            and Gemini API for personalized health insights based on dietary restrictions
+            and fitness goals.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Google Vision</span>
+            <span>Gemini API</span>
+            <span>Streamlit</span>
+          </div>
+        </div>
+
+        <!-- CRM App -->
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <span class="project-date">Aug 2024</span>
+          </div>
+          <h3 class="project-title">CRM App</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/CRM%20customer%20dashboard%20business%20software%20dark%20UI%20glass?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Web-based Customer Relationship Management system with authentication-protected
+            access, tabular record display, and full CRUD operations on customer records
+            using Django REST API.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Django</span>
+            <span>REST API</span>
+            <span>Bootstrap 5</span>
+          </div>
+        </div>
+
+        <!-- Employee Digital Signature -->
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+            </div>
+            <span class="project-date">Aug 2024</span>
+          </div>
+          <h3 class="project-title">Employee Digital Signature Generator</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/digital%20signature%20document%20electronic%20pen%20secure%20minimal%20corporate?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Secure web app that authenticates employees and dynamically generates
+            personalized digital signature pages. Adding employee data to the database
+            automatically activates their access and no manual page creation needed.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Django</span>
+            <span>SQL</span>
+            <span>HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- News Aggregator -->
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+            </div>
+            <span class="project-date">Jul – Aug 2024</span>
+          </div>
+          <h3 class="project-title">News Aggregator</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/news%20headlines%20digital%20feeds%20newspaper%20abstract%20collage%20dark?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Built a web scraper that gathers news articles from multiple sources, extracts key details like title, author, date, and source, and serves them through a unified REST API in JSON format.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Django REST</span>
+            <span>SQL</span>
+            <span>Web Scraping</span>
+          </div>
+        </div>
+
+        <!-- Kuwait National Library -->
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <span class="project-date">Jun – Jul 2024</span>
+          </div>
+          <h3 class="project-title">Kuwait National Library</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/grand%20library%20bookshelves%20warm%20light%20architecture%20reading%20hall?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Responsive web page built with UI/UX design principles and Bootstrap 5.
+            Utilized media queries to ensure the page displays correctly across all
+            screen sizes.
+          </p>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Bootstrap 5</span>
+          </div>
+        </div>
+
+        <!-- Network Simulation -->
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title">Network Simulation</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/computer%20network%20topology%20diagram%20nodes%20cables%20blue%20tech%20minimal?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Designed and simulated network infrastructures using Cisco Packet Tracer.
+            Configured routers, switches, DHCP, VLANs, and static/dynamic routing
+            protocols with performance analysis.
+          </p>
+          <div class="project-tech">
+            <span>Cisco Packet Tracer</span>
+            <span>Networking</span>
+            <span>VLANs</span>
+          </div>
+        </div>
+
+        <!-- DCF Valuation -->
+        <div class="project-card reveal" data-category="finance">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title">DCF Valuation – MSFT & UNH</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/DCF%20discounted%20cash%20flow%20spreadsheet%20finance%20model%20dark%20minimal?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Three-statement DCF models estimating intrinsic valuations for Microsoft and
+            UnitedHealth Group. Analyzed revenue drivers, margins, growth assumptions,
+            and conducted discount rate stress testing.
+          </p>
+          <div class="project-tech">
+            <span>Financial Modeling</span>
+            <span>DCF</span>
+            <span>Valuation</span>
+          </div>
+        </div>
+
+        <!-- Automated DCF Engine -->
+        <div class="project-card reveal" data-category="finance">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title">Automated DCF Valuation Engine</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/automated%20financial%20modeling%20dashboard%20AI%20assistant%20glowing%20UI?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Automated system generating three-statement DCF models from user inputs.
+            Engineered financial projection logic for revenue growth, margins, CapEx,
+            and discount rates with dashboards for sensitivity scenarios.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Financial Modeling</span>
+            <span>Dashboards</span>
+          </div>
+        </div>
+
+        <!-- Quantitative Trading -->
+        <div class="project-card reveal" data-category="finance">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title">Quantitative Trading Strategy</h3>
+          <div class="project-thumb" aria-hidden="true">
+            <img src="https://image.pollinations.ai/prompt/algorithmic%20trading%20candlestick%20chart%20terminal%20dark%20quant%20finance?width=512&amp;height=288&amp;nologo=true" alt="" loading="lazy" decoding="async" width="512" height="288" referrerpolicy="no-referrer" />
+          </div>
+          <p class="project-description">
+            Python trading system combining mean reversion and trend-following strategies.
+            End-to-end pipeline for data ingestion, signal generation, and backtesting
+            engine comparing CAGR, Sharpe ratio, and volatility.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Backtesting</span>
+            <span>Time Series</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-header reveal">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-content reveal">
+        <p class="contact-description">
+          I'm currently looking for new opportunities. Whether you have a question,
+          a project idea, or just want to say hello, my inbox is always open.
+        </p>
+        <div class="contact-cards">
+          <a href="mailto:mohaa143@mcmaster.ca" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div>
+              <strong>Email</strong>
+              <span>mohaa143@mcmaster.ca</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/ali-zafar-mohammad-754103244/" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <div>
+              <strong>LinkedIn</strong>
+              <span>ali-zafar-mohammad</span>
+            </div>
+          </a>
+          <a href="https://github.com/mohdalizafar" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <div>
+              <strong>GitHub</strong>
+              <span>mohdalizafar</span>
+            </div>
+          </a>
+        </div>
+        <a href="mailto:mohaa143@mcmaster.ca" class="btn btn-primary btn-large">
+          Say Hello
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">AZM<span class="logo-dot">.</span></div>
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#experience">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer-copy">&copy; 2025 Ali Zafar Mohammad. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
